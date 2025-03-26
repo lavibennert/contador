@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <title>Meu Contador</title>
+<style>
+*    {  
+     margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: beige;
+    color: blueviolet;
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+
+  section {
+    background: rgba(255, 255, 255, .2);
+    padding: 20px;
+    border-radius: 3px;
+  }
+
+  p {
+    font-size: 100px;
+  }
+</style>
+</head>
+
+</body>
+ <section>
+   <h1>Contador</h1>
+   <p>0</p>
+   <button onclick="diminuir()">menos</button>
+   <button onclick="aumentar()">mais</button>
+ </section>
+ <script>  
+
+  // estado da minha aplicação
+   let numero = 0 
+   
+  // alteradores de estado da aplicação
+  function aumentar() {
+     numero++
+     mostrarNaTela()
+   }
+   
+    function diminuir() {
+    numero--
+    mostrarNaTela()
+   }  
+
+  //jogar o estado de aplicação na tela
+  function mostrarNaTela() {
+    const p = document.querySelector("p")
+    p.innerText = numero
+   }
+
+  //iniciar
+  mostrarNaTela
+</script>
+</body>
+
+</html>
